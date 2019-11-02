@@ -6,7 +6,7 @@
 /*   By: tlouekar <tlouekar@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/28 13:41:49 by tlouekar          #+#    #+#             */
-/*   Updated: 2019/11/02 11:04:43 by tlouekar         ###   ########.fr       */
+/*   Updated: 2019/11/02 18:19:11 by tlouekar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void	ft_lstiter(t_list *lst, void (*f)(t_list *elem))
 		while (temp)
 		{
 			next = temp->next;
-			(*f)(temp);
+			f(temp);
 			temp = next;
 		}
 	}

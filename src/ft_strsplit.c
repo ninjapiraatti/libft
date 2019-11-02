@@ -6,7 +6,7 @@
 /*   By: tlouekar <tlouekar@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/23 09:34:01 by tlouekar          #+#    #+#             */
-/*   Updated: 2019/10/29 12:01:59 by tlouekar         ###   ########.fr       */
+/*   Updated: 2019/11/03 00:13:15 by tlouekar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,15 +16,17 @@ static int	count(char *s, char c)
 {
 	size_t	i;
 	size_t	count;
+	size_t	len;
 
 	i = 0;
+	len = ft_strlen(s);
 	count = 0;
-	while (i < ft_strlen(s))
+	while (i < len)
 	{
 		if (s[i] != c)
 		{
 			count++;
-			while (s[i] != c)
+			while (s[i] != c && i < len)
 				i++;
 		}
 		i++;
@@ -50,7 +52,12 @@ static int	wordlen(char *s, char c, int start)
 
 static char	**make_dull_null(char **s, int i)
 {
-	s[i] = NULL;
+	if (i == 0 && !s[1])
+		return (s);
+	if (i == 0)
+		s[i + 1] = NULL;
+	else
+		s[i] = NULL;
 	return (s);
 }
 
@@ -65,7 +72,7 @@ char		**ft_strsplit(char const *s, char c)
 	j = 0;
 	if ((splits = (char **)malloc((sizeof(char *) * count((char *)s, c) + 1))))
 	{
-		while (i++ < count((char *)s, c) - 1)
+		while ((i++ < count((char *)s, c) - 1) || (i == 0))
 		{
 			while (s[j] == c)
 				j++;

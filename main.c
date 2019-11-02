@@ -6,7 +6,7 @@
 /*   By: tlouekar <tlouekar@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/14 16:04:10 by tlouekar          #+#    #+#             */
-/*   Updated: 2019/11/02 17:49:34 by tlouekar         ###   ########.fr       */
+/*   Updated: 2019/11/02 23:45:19 by tlouekar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ t_list *hello(t_list *elem)
 	t_list *new;
 
 	new = elem;
-	new = ft_lstnew("hello", 6);
+	new = ft_lstnew(elem->content, elem->content_size);
 	return (new);
 }
 
@@ -59,7 +59,10 @@ int main(void) {
 	char	str_memmove_dst[11] = "Kylpynalle";
 	char	str_memmove_src[7] = "Pyllyp";
 	char	str_memchr[14] = "Behm ja börh\0";
-	//char	str_lstnew[11] = "Listakoiro";
+	char	str_lstnew[11] = "Listakoiro";
+	char	str_strrchr[] = "";
+	char	str_strsplit[] = "xxx";
+	char	**arr_strsplit;
 	t_list	*node_lstnew;
 	
 	if (demomode == 1)
@@ -150,6 +153,15 @@ int main(void) {
 	/* ft_strlcat */
 	/* ft_strchr */
 	/* ft_strrchr */
+
+	printf("FT_STRRCHR\nLike strchr but takes it from behind.\n\n");
+	printf("str_strrchr before ft_strrchr: \t\t\t\t\t\t|%s|\n", str_strrchr);
+	printf("str_strrchr after ft_strrchr(str_strrchr, '\\0') \t\t\t|%s|\n", ft_strrchr(str_strrchr, '\0'));
+	if (demomode == 1)
+	{
+		printf("%s", anykey);
+		getchar();
+	}
 	/* ft_strstr */
 	/* ft_strnstr */
 	/* ft_strcmp */
@@ -178,7 +190,6 @@ int main(void) {
 	/* ft_strsub */
 	/* ft_strjoin */
 	/* ft_strtrim */
-	/* ft_strtrim */
 
 	printf("FT_STRTRIM\nTrims.\n\n");
 	printf("Strtrim of '  koiro  ' \t\t\t\t\t\t\t|%s|\n", ft_strtrim(ft_strdup("  koiro  ")));
@@ -188,6 +199,20 @@ int main(void) {
 		getchar();
 	}
 	/* ft_strsplit */
+
+	printf("FT_STRSPLIT\nsplits.\n\n");
+	arr_strsplit = ft_strsplit(str_strsplit, 'x');
+	printf("Strsplit[0]: \t\t\t\t\t\t\t|%s|\n", arr_strsplit[0]);
+	//printf("Strsplit[1]: \t\t\t\t\t\t\t|%s|\n", arr_strsplit[1]);
+	//printf("Strsplit[2]: \t\t\t\t\t\t\t|%s|\n", arr_strsplit[2]);
+	//printf("Strsplit[3]: \t\t\t\t\t\t\t|%s|\n", arr_strsplit[3]);
+	//printf("Strsplit[4]: \t\t\t\t\t\t\t|%s|\n", arr_strsplit[4]);
+	if (demomode == 1)
+	{
+		printf("%s", anykey);
+		getchar();
+	}
+
 	/* ft_itoa */
 	/* ft_putchar */
 	/* ft_putstr */
@@ -202,7 +227,7 @@ int main(void) {
 	/* ft_lstnew */
 
 	printf("FT_LSTNEW\nCreate a brand new linked list.\n\n");
-	node_lstnew = ft_lstnew(strdup("Listakoiro"), 11);
+	node_lstnew = ft_lstnew(str_lstnew, 11);
 	printf("ft_lstnew returns: \t\t\t\t\t\t\t|%s|\n", node_lstnew->content);
 	if (demomode == 1)
 	{
@@ -229,19 +254,16 @@ int main(void) {
 	printf("FT_LSTMAP\nIterates a list lst and applies the function f to each link to create a 'fresh' list using malloc resulting from the successive applications of f. If the allocation fails, the function returns null.\n\n");
 	t_list *first;
 	t_list *second;
-	t_list *third;
-	t_list **ret;
+	t_list *(*f)(t_list *elem);
 
 	first = ft_lstnew("first", 6);
-	second = ft_lstnew("second", 7);
-	third = ft_lstnew("third", 6);
-	t_list *(*f)(t_list *elem);
+	first->next = ft_lstnew("second", 7);
+	first->next->next = ft_lstnew("third", 6);
 	f = hello;
-	ret = &first;
-
-	ft_lstadd(ret, second);
 	second = ft_lstmap(first, f);
 	printf("ft_lstmap returns: \t\t\t\t\t\t\t|%s|\n", second->content);
+	printf("ft_lstmap returns: \t\t\t\t\t\t\t|%s|\n", second->next->content);
+	printf("ft_lstmap returns: \t\t\t\t\t\t\t|%s|\n", second->next->next->content);
 	if (demomode == 1)
 	{
 		printf("%s", anykey);

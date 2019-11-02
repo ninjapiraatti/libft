@@ -6,7 +6,7 @@
 /*   By: tlouekar <tlouekar@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/28 13:41:55 by tlouekar          #+#    #+#             */
-/*   Updated: 2019/11/02 17:40:19 by tlouekar         ###   ########.fr       */
+/*   Updated: 2019/11/02 19:48:36 by tlouekar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,12 +19,12 @@ t_list	*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))
 
 	if (!lst)
 		return (NULL);
-	new = ft_lstnew((f(lst))->content, (f(lst))->content_size);
+	new = f(lst);
 	tmp = new;
 	while (lst->next)
 	{
 		lst = lst->next;
-		tmp->next = ft_lstnew((f(lst))->content, (f(lst))->content_size);
+		tmp->next = f(lst);
 		tmp = tmp->next;
 	}
 	return (new);
