@@ -1,29 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcat.c                                        :+:      :+:    :+:   */
+/*   ft_wordlen.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tlouekar <tlouekar@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/21 15:05:45 by tlouekar          #+#    #+#             */
-/*   Updated: 2019/11/03 09:37:50 by tlouekar         ###   ########.fr       */
+/*   Created: 2019/11/03 09:00:50 by tlouekar          #+#    #+#             */
+/*   Updated: 2019/11/03 09:26:53 by tlouekar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strcat(char *s1, const char *s2)
+int	ft_wordlen(char *s, char c, int start)
 {
-	int	i;
-	int len;
+	int		i;
 
 	i = 0;
-	len = ft_strlen(s1);
-	while (s2[i] != '\0')
-	{
-		s1[len + i] = s2[i];
+	while (s[start + i] != c && s[start + i])
 		i++;
-	}
-	s1[len + i] = '\0';
-	return (s1);
+	return (i);
 }

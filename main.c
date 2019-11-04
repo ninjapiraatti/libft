@@ -6,7 +6,7 @@
 /*   By: tlouekar <tlouekar@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/14 16:04:10 by tlouekar          #+#    #+#             */
-/*   Updated: 2019/11/04 15:54:58 by tlouekar         ###   ########.fr       */
+/*   Updated: 2019/11/04 21:33:30 by tlouekar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,11 +64,16 @@ t_list *hello(t_list *elem)
 	return (new);
 }
 
+void hullo(t_list *elem)
+{
+	elem->content = "sdf";
+}
+
 int main(void) {
 
 	int		demomode;
 
-	demomode = 0;
+	demomode = 1;
 	
 	char	anykey[59] = "\033[1;32m-----------------------------\nPress any key.\n\n\033[0m";
 	char	str_memset[22] = "DollarDollarBillYaall";
@@ -677,9 +682,9 @@ int main(void) {
 	}
 
 	/* ft_lstdelone */
-	printf("FT_LSTDELONE\nDelete content from list 'node' with chosen function. It just happens that the chosen function replaces shit with X.\n\n");
+	printf("FT_LSTDELONE\nDelete content from list 'node' with chosen function This function does not test if next was deleted or not.\n\n");
 	ft_lstdelone(&node_lstnew, ft_putstri);
-	if(!node_lstnew->content)
+	if (!node_lstnew)
 		printf("Node deleted\n");
 	if (demomode == 1)
 	{
@@ -687,9 +692,55 @@ int main(void) {
 		getchar();
 	}
 
-	/* ft_lstdel */
-	/* ft_lstadd */
+	/* ft_lstdel and ft_lstadd */
+	printf("FT_LSTDEL\nTakes as a parameter the adress of a pointer to a link and frees the memory of this link and every successors of that link using the functions del and free(3). Finally the pointer to the link that was just freed must be set to null (quite similar to the function ft_memdel from the mandatory part).\n\n");
+	t_list	*lst_lstdel;
+	lst_lstdel = NULL;
+	int		i;
+
+	i = 0;
+	lst_lstdel = ft_lstnew(ft_strdup("koiro"), 5);
+	while (i < 6)
+	{
+		ft_lstadd(&lst_lstdel, ft_lstnew(ft_strdup("Borem"), 5));
+		i++;
+	}
+	ft_lstdel(&lst_lstdel, ft_putstri);
+	if (!lst_lstdel)
+		printf("Node deleted\n");
+	else
+		printf("Node NOT deleted\n");
+	if (demomode == 1)
+	{
+		printf("%s", anykey);
+		getchar();
+	}
+
 	/* ft_lstiter */
+	printf("FT_LSTITER\nIterates the list lst and applies the function f to each link.\n\n");
+	t_list	*lst_lstiter;
+	int		j;
+	void (*f_lstiter)(t_list *elem);
+
+	lst_lstiter = NULL;
+	j = 0;
+	f_lstiter = hullo;	
+
+	while (j < 6)
+	{
+		ft_lstadd(&lst_lstiter, ft_lstnew(ft_strdup("Borem"), 5));
+		j++;
+	}
+	ft_lstiter(lst_lstiter, f_lstiter);
+	printf("ft_lstiter returns: \t\t\t\t\t\t\t|%s|\n", lst_lstiter->content);
+	printf("ft_lstiter returns: \t\t\t\t\t\t\t|%s|\n", lst_lstiter->next->content);
+	printf("ft_lstiter returns: \t\t\t\t\t\t\t|%s|\n", lst_lstiter->next->next->content);
+	if (demomode == 1)
+	{
+		printf("%s", anykey);
+		getchar();
+	}
+
 	/* ft_lstmap */
 	printf("FT_LSTMAP\nIterates a list lst and applies the function f to each link to create a 'fresh' list using malloc resulting from the successive applications of f. If the allocation fails, the function returns null.\n\n");
 	t_list *first;

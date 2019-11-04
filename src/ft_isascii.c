@@ -6,7 +6,7 @@
 /*   By: tlouekar <tlouekar@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/22 11:55:11 by tlouekar          #+#    #+#             */
-/*   Updated: 2019/10/22 11:56:36 by tlouekar         ###   ########.fr       */
+/*   Updated: 2019/11/03 09:33:48 by tlouekar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int		ft_isascii(int c)
 {
-	if(c >= 0 && c < 128)
+	if (c >= 0 && c < 128)
 		return (1);
 	else
 		return (0);

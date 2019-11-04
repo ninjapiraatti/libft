@@ -6,7 +6,7 @@
 /*   By: tlouekar <tlouekar@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/22 11:49:53 by tlouekar          #+#    #+#             */
-/*   Updated: 2019/10/22 11:58:23 by tlouekar         ###   ########.fr       */
+/*   Updated: 2019/11/03 09:34:03 by tlouekar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int		ft_isdigit(int c)
 {
-	if(c > 47 && c < 58)
+	if (c > 47 && c < 58)
 		return (1);
 	else
 		return (0);

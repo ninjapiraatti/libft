@@ -6,7 +6,7 @@
 /*   By: tlouekar <tlouekar@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/21 11:09:54 by tlouekar          #+#    #+#             */
-/*   Updated: 2019/10/28 10:11:08 by tlouekar         ###   ########.fr       */
+/*   Updated: 2019/11/03 10:41:19 by tlouekar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,27 +14,27 @@
 
 void	*ft_memmove(void *dst, const void *src, size_t n)
 {
-	size_t	i;
-	char	*cdst;
-	char	*csrc;
-	char	temp[n];
+	size_t i;
 
-	i = 0;
-	cdst = (char *)dst;
-	csrc = (char *)src;
 	if (!src && !dst)
 		return (dst);
-	while (i < n)
+	if (src < dst)
 	{
-		temp[i] = csrc[i];
-		i++;
+		i = n;
+		while (i > 0)
+		{
+			i--;
+			((char *)dst)[i] = ((char *)src)[i];
+		}
 	}
-	i = 0;
-	while (i < n)
+	else
 	{
-		cdst[i] = temp[i];
-		i++;
+		i = 0;
+		while (i < n)
+		{
+			((char *)dst)[i] = ((char *)src)[i];
+			i++;
+		}
 	}
 	return (dst);
-	free(temp);
 }

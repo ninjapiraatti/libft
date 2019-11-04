@@ -1,29 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcat.c                                        :+:      :+:    :+:   */
+/*   ft_wordcnt.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tlouekar <tlouekar@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/21 15:05:45 by tlouekar          #+#    #+#             */
-/*   Updated: 2019/11/03 09:37:50 by tlouekar         ###   ########.fr       */
+/*   Created: 2019/11/03 09:01:35 by tlouekar          #+#    #+#             */
+/*   Updated: 2019/11/03 09:26:57 by tlouekar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strcat(char *s1, const char *s2)
+int		ft_wordcnt(char *s, char c)
 {
-	int	i;
-	int len;
+	size_t	i;
+	size_t	count;
+	size_t	len;
 
 	i = 0;
-	len = ft_strlen(s1);
-	while (s2[i] != '\0')
+	len = ft_strlen(s);
+	count = 0;
+	while (i < len)
 	{
-		s1[len + i] = s2[i];
+		if (s[i] != c)
+		{
+			count++;
+			while (s[i] != c && i < len)
+				i++;
+		}
 		i++;
 	}
-	s1[len + i] = '\0';
-	return (s1);
+	return ((int)count);
 }
