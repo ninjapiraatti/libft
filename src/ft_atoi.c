@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tlouekar <tlouekar@student.42.fr>          +#+  +:+       +#+        */
+/*   By: tlouekar <tlouekar@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/15 11:28:48 by tlouekar          #+#    #+#             */
-/*   Updated: 2019/07/25 09:57:31 by tlouekar         ###   ########.fr       */
+/*   Updated: 2019/11/05 08:25:31 by tlouekar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_atoi(char *str)
+int		ft_atoi(const char *str)
 {
 	long i;
 	long result;

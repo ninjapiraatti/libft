@@ -6,7 +6,7 @@
 /*   By: tlouekar <tlouekar@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/22 14:43:31 by tlouekar          #+#    #+#             */
-/*   Updated: 2019/10/26 19:04:43 by tlouekar         ###   ########.fr       */
+/*   Updated: 2019/11/05 09:06:18 by tlouekar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ char	*ft_strmap(char const *s, char (*f)(char))
 	char	*str;
 
 	i = 0;
+	if (!s)
+		return (NULL);
 	len = ft_strlen((char*)s);
 	if ((str = malloc(len * sizeof(char) + 1)))
 	{

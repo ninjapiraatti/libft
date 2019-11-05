@@ -6,11 +6,13 @@
 /*   By: tlouekar <tlouekar@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/16 14:47:48 by tlouekar          #+#    #+#             */
-/*   Updated: 2019/10/16 15:29:58 by tlouekar         ###   ########.fr       */
+/*   Updated: 2019/11/05 09:37:12 by tlouekar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strnequ(char *s1, char *s2, int n)
+#include "libft.h"
+
+int	ft_strnequ(char const *s1, char const *s2, int n)
 {
 	int i;
 

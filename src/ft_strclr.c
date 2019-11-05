@@ -6,7 +6,7 @@
 /*   By: tlouekar <tlouekar@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/22 12:24:20 by tlouekar          #+#    #+#             */
-/*   Updated: 2019/10/22 12:32:20 by tlouekar         ###   ########.fr       */
+/*   Updated: 2019/11/05 09:02:17 by tlouekar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ void	ft_strclr(char *s)
 	int		i;
 
 	i = 0;
+	if (!s)
+		return ;
 	while (s[i])
 	{
 		s[i] = '\0';
