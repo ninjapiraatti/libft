@@ -6,14 +6,13 @@
 /*   By: tlouekar <tlouekar@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/16 08:46:38 by tlouekar          #+#    #+#             */
-/*   Updated: 2019/11/05 08:39:38 by tlouekar         ###   ########.fr       */
+/*   Updated: 2019/11/05 10:36:06 by tlouekar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
-# include <stdio.h>
 # include <string.h>
 # include <stdlib.h>
 # include <unistd.h>

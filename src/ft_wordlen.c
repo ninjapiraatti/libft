@@ -6,11 +6,9 @@
 /*   By: tlouekar <tlouekar@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/03 09:00:50 by tlouekar          #+#    #+#             */
-/*   Updated: 2019/11/03 09:26:53 by tlouekar         ###   ########.fr       */
+/*   Updated: 2019/11/06 10:56:55 by tlouekar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 int	ft_wordlen(char *s, char c, int start)
 {

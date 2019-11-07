@@ -6,11 +6,9 @@
 /*   By: tlouekar <tlouekar@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/22 13:37:12 by tlouekar          #+#    #+#             */
-/*   Updated: 2019/11/05 09:05:05 by tlouekar         ###   ########.fr       */
+/*   Updated: 2019/11/06 10:56:55 by tlouekar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 void	ft_striter(char *s, void (*f)(char *))
 {

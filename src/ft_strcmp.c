@@ -6,11 +6,9 @@
 /*   By: tlouekar <tlouekar@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/22 11:14:48 by tlouekar          #+#    #+#             */
-/*   Updated: 2019/10/26 19:25:31 by tlouekar         ###   ########.fr       */
+/*   Updated: 2019/11/06 10:56:55 by tlouekar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 int		ft_strcmp(const char *s1, const char *s2)
 {

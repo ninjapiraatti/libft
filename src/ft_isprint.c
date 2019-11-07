@@ -6,11 +6,9 @@
 /*   By: tlouekar <tlouekar@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/22 11:55:18 by tlouekar          #+#    #+#             */
-/*   Updated: 2019/10/22 11:57:57 by tlouekar         ###   ########.fr       */
+/*   Updated: 2019/11/06 10:56:55 by tlouekar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 int		ft_isprint(int c)
 {

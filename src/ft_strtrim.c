@@ -6,7 +6,7 @@
 /*   By: tlouekar <tlouekar@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/23 09:14:02 by tlouekar          #+#    #+#             */
-/*   Updated: 2019/11/05 09:18:33 by tlouekar         ###   ########.fr       */
+/*   Updated: 2019/11/07 16:36:25 by tlouekar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,6 @@ char			*ft_strtrim(char const *s)
 {
 	int			len;
 	char		*newstr;
-	char		*temp;
 
 	if (!s)
 		return (NULL);
@@ -58,9 +57,6 @@ char			*ft_strtrim(char const *s)
 		newstr = trimstart((char *)s, newstr);
 		len = ft_strlen(newstr);
 		newstr = trimend(newstr, (len - 1));
-		temp = ft_strdup(newstr);
-		free(newstr);
-		newstr = temp;
 		return (newstr);
 	}
 	else

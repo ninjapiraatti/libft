@@ -6,11 +6,9 @@
 /*   By: tlouekar <tlouekar@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/20 17:33:48 by tlouekar          #+#    #+#             */
-/*   Updated: 2019/11/05 08:22:54 by tlouekar         ###   ########.fr       */
+/*   Updated: 2019/11/06 10:56:55 by tlouekar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 char	*ft_strcpy(char *dst, const char *src)
 {

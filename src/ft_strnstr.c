@@ -6,7 +6,7 @@
 /*   By: tlouekar <tlouekar@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/22 11:02:33 by tlouekar          #+#    #+#             */
-/*   Updated: 2019/10/29 16:48:01 by tlouekar         ###   ########.fr       */
+/*   Updated: 2019/11/06 12:43:43 by tlouekar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ char	*ft_strnstr(const char *hstck, const char *ndl, size_t len)
 		j = 0;
 		if (hstck[i] == ndl[0])
 		{
-			while ((ndl[j] == hstck[i + j]) && ndl[j] != '\0' && (i + j <= len))
+			while ((ndl[j] == hstck[i + j]) && ndl[j] != '\0' && (i + j < len))
 			{
 				j++;
 			}

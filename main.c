@@ -6,7 +6,7 @@
 /*   By: tlouekar <tlouekar@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/14 16:04:10 by tlouekar          #+#    #+#             */
-/*   Updated: 2019/11/04 21:33:30 by tlouekar         ###   ########.fr       */
+/*   Updated: 2019/11/07 15:23:10 by tlouekar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -167,7 +167,7 @@ int main(void) {
 	printf("FT_MEMMOVE\nCopies n characters from str2 to str1, but for overlapping memory blocks, memmove() is a safer approach than memcpy().\n\n");
 	printf("str_memmove_dst before ft_memmove: \t\t\t\t\t|%s|\n", str_memmove_dst);
 	ft_memmove(str_memmove_dst, str_memmove_src, 6);
-	printf("str_memmove_dst after ft_memmove('Kylpynalle', 'Pyllyp', 6): \t\t|%s|\n", str_memmove_dst);
+	printf("str_memmove_dst after ft_memmove('Kylpynalle', 'Pal', 6): \t\t|%s|\n", str_memmove_dst);
 	int memmove_size = 128 * 1024 * 1024;
 	printf("Trying to break ft_memmove with really big size.\n");
 	char *memmove_dst = (char *)malloc(sizeof(char) * memmove_size);
@@ -183,8 +183,8 @@ int main(void) {
 	/* ft_memchr */
 	printf("FT_MEMCHR\nLike memcpy but stops at designated character.\n\n");
 	printf("str_memchr before ft_memchr: \t\t\t\t\t\t|%s|\n", str_memchr);
-	ft_memchr(str_memchr, 'b', 10);
-	printf("str_memchr_dst after ft_memchr('Behm ja börh', 'b', 10): \t\t|%s|\n", str_memchr);
+	printf("str_memchr_dst after ft_memchr('Behm ja börh', 'b', 10): \t\t|%p|\n", ft_memchr(str_memchr, 'b', 10));
+	printf("str_memchr_dst after memchr('Behm ja börh', 'b', 10): \t\t\t|%p|\n", memchr(str_memchr, 'b', 10));
 	if (demomode == 1)
 	{
 		printf("%s", anykey);
