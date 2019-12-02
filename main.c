@@ -6,14 +6,14 @@
 /*   By: tlouekar <tlouekar@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/14 16:04:10 by tlouekar          #+#    #+#             */
-/*   Updated: 2019/11/07 15:23:10 by tlouekar         ###   ########.fr       */
+/*   Updated: 2019/12/02 09:27:32 by tlouekar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
-#include "libft/libft.h"
+#include "src/includes/libft.h"
 
 void ft_putstri(void *s, size_t n)
 {
