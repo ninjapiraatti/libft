@@ -1,29 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_strcsub.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tlouekar <tlouekar@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/21 16:01:22 by tlouekar          #+#    #+#             */
-/*   Updated: 2019/11/27 12:25:16 by tlouekar         ###   ########.fr       */
+/*   Created: 2019/11/18 10:31:03 by tlouekar          #+#    #+#             */
+/*   Updated: 2019/12/01 12:07:25 by tlouekar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strchr(const char *s, int c)
+char	*ft_strcsub(const char *s)
 {
-	char	*p;
+	char	*temp;
+	int		i;
+	int		len;
+	int		nlfound;
 
-	if (!s)
-		return (NULL);
-	p = (char *)s;
-	while (*p != c)
+	i = 0;
+	nlfound = 0;
+	len = 0;
+	while (s[len++] != '\0')
 	{
-		if (*p == '\0')
-			return (NULL);
-		p++;
+		if (s[len] == '\n')
+		{
+			nlfound = 1;
+			break ;
+		}
 	}
-	return (p);
+	if (nlfound == 1)
+	{
+		if (!(temp = (char *)malloc(len * sizeof(char) + 1)))
+			return (0);
+		while (i++ < len)
+			temp[i] = s[i];
+		return (temp);
+	}
+	return ((char *)s);
 }
