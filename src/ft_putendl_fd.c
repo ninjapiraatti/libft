@@ -6,11 +6,11 @@
 /*   By: tlouekar <tlouekar@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/30 16:02:09 by tlouekar          #+#    #+#             */
-/*   Updated: 2019/12/02 09:20:24 by tlouekar         ###   ########.fr       */
+/*   Updated: 2020/07/14 15:39:33 by tlouekar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "includes/libft.h"
+#include "../includes/libft.h"
 
 void	ft_putendl_fd(char const *s, int fd)
 {

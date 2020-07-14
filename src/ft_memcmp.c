@@ -6,11 +6,11 @@
 /*   By: tlouekar <tlouekar@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/21 13:57:04 by tlouekar          #+#    #+#             */
-/*   Updated: 2019/12/02 09:20:24 by tlouekar         ###   ########.fr       */
+/*   Updated: 2020/07/14 15:39:33 by tlouekar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "includes/libft.h"
+#include "../includes/libft.h"
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {

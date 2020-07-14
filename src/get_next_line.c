@@ -6,11 +6,11 @@
 /*   By: tlouekar <tlouekar@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/05 11:09:08 by tlouekar          #+#    #+#             */
-/*   Updated: 2020/07/14 15:05:59 by tlouekar         ###   ########.fr       */
+/*   Updated: 2020/07/14 15:39:33 by tlouekar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "includes/libft.h"
+#include "../includes/libft.h"
 
 static int		linejoiner(int fd, char **strs_joiner, char **line, int bytes)
 {

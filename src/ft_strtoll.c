@@ -6,11 +6,11 @@
 /*   By: tlouekar <tlouekar@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/14 15:08:42 by tlouekar          #+#    #+#             */
-/*   Updated: 2020/07/14 15:12:41 by tlouekar         ###   ########.fr       */
+/*   Updated: 2020/07/14 15:39:33 by tlouekar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "includes/libft.h"
+#include "../includes/libft.h"
 
 long long		ft_strtoll(const char *str, const char **endptr, int base)
 {

@@ -6,13 +6,13 @@
 #    By: tlouekar <tlouekar@student.hive.fi>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/07/24 09:41:56 by tlouekar          #+#    #+#              #
-#    Updated: 2020/07/14 15:19:26 by tlouekar         ###   ########.fr        #
+#    Updated: 2020/07/14 15:38:44 by tlouekar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
 
-SRCS = ft_atoi.c \
+SRCS = src/ft_atoi.c \
 src/ft_isascii.c \
 src/ft_isprint.c \
 src/ft_isalpha.c \
@@ -76,7 +76,7 @@ src/ft_strtrim.c \
 src/ft_strcsub.c \
 src/get_next_line.c \
 
-INCS = includes/libft.h
+INCS = includes/
 
 CFLAGS = -g -Wall -Wextra -Werror
 

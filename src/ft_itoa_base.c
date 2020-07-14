@@ -6,11 +6,11 @@
 /*   By: tlouekar <tlouekar@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/21 14:02:58 by exam              #+#    #+#             */
-/*   Updated: 2020/07/14 15:16:24 by tlouekar         ###   ########.fr       */
+/*   Updated: 2020/07/14 15:39:33 by tlouekar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "includes/libft.h"
+#include "../includes/libft.h"
 
 char			*ft_itoa_base(long long value, int base)
 {
