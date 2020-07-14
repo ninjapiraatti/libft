@@ -6,13 +6,13 @@
 /*   By: tlouekar <tlouekar@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/05 11:09:08 by tlouekar          #+#    #+#             */
-/*   Updated: 2019/12/20 14:36:40 by tlouekar         ###   ########.fr       */
+/*   Updated: 2020/07/14 15:05:59 by tlouekar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "includes/libft.h"
 
-int		linejoiner(int fd, char **strs_joiner, char **line, int bytes)
+static int		linejoiner(int fd, char **strs_joiner, char **line, int bytes)
 {
 	int		i;
 	char	*temp;
@@ -40,7 +40,7 @@ int		linejoiner(int fd, char **strs_joiner, char **line, int bytes)
 	return (1);
 }
 
-int		get_next_line(const int fd, char **line)
+int				get_next_line(const int fd, char **line)
 {
 	char		buf[BUFF_SIZE + 1];
 	static char *sv[FD_MAX];

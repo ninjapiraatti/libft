@@ -6,18 +6,18 @@
 /*   By: tlouekar <tlouekar@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/21 14:02:58 by exam              #+#    #+#             */
-/*   Updated: 2020/01/28 10:29:15 by tlouekar         ###   ########.fr       */
+/*   Updated: 2020/07/14 15:16:24 by tlouekar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "includes/libft.h"
 
-char		*ft_itoa_base(long value, int base)
+char			*ft_itoa_base(long long value, int base)
 {
-	char	*s;
-	long	n;
-	int		sign;
-	int		i;
+	char		*s;
+	long long	n;
+	int			sign;
+	int			i;
 
 	n = (value < 0) ? -value : value;
 	sign = (value < 0 && base == 10) ? -1 : 0;
