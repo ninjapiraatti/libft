@@ -8,4 +8,4 @@ In Hive we're not allowed to use any nice functions like printf etc. Libft is a 
 Not much to it, I wrote the functions.
 
 ## In hindsight
-Libft should be fast and reliable. Currently mine is reliable.
+Libft should be fast and reliable. Currently mine is mostly reliable.
