@@ -6,7 +6,7 @@
 /*   By: tlouekar <tlouekar@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/25 13:57:43 by tlouekar          #+#    #+#             */
-/*   Updated: 2020/07/14 15:39:33 by tlouekar         ###   ########.fr       */
+/*   Updated: 2021/01/16 10:47:31 by tlouekar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ static int	intlen(long n)
 	return (i);
 }
 
-char		*ft_itoa(int n)
+char		*ft_itoa(long long n)
 {
 	char	*str;
 	int		len;
@@ -33,7 +33,7 @@ char		*ft_itoa(int n)
 	long	nb;
 
 	neg = 0;
-	nb = (long)n;
+	nb = (long long)n;
 	if (nb < 0)
 	{
 		neg = 1;
